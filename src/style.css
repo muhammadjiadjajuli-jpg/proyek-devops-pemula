@@ -1,5 +1,6 @@
 body {
-    background-color: #f0f2f5;
+    background-color: #1a1a2e; /* Biru Gelap Nyaman */
+    color: #e94560; /* Merah Muda Enerjik */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
@@ -10,35 +11,25 @@ body {
 }
 
 h1 {
-    color: #1a73e8;
-    background: white;
-    padding: 20px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #16213e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-bottom: 5px solid #e94560;
 }
 
-p {
-    color: #5f6368;
-    font-size: 1.1rem;
-}
-/* Gaya untuk tombol navigasi */
 .btn-nav {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #3498db;
+    background-color: #e94560;
     color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
     text-decoration: none;
-    border-radius: 25px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    transition: transform 0.3s;
 }
 
 .btn-nav:hover {
-    background-color: #2980b9;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-.btn-nav i {
-    margin-right: 8px;
+    transform: scale(1.1); /* Efek tombol membesar sedikit */
+    background-color: #ff2e63;
 }
