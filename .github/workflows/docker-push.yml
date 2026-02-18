@@ -1,0 +1,25 @@
+name: Push ke Docker Hub Otomatis
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil Kode
+        uses: actions/checkout@v4
+
+      - name: Login ke Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build dan Push Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: mjiad/website-devops:latest # Selalu update versi terbaru
